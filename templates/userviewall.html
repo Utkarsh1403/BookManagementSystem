@@ -1,0 +1,38 @@
+{% extends "userbase.html" %}
+{% block content %}
+
+    <h3 style="text-align: center;">AVAILABLE BOOKS</h3>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <table class="table table-border">
+                    <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Publisher</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in books %}
+                    <tr>
+                        <th scope="row">{{ i[1] }}</th>
+                        <td>{{ i[2] }}</td>
+                        <td>{{ i[3] }}</td>
+                        <td>{{ i[4] }}</td>
+                        <td>{{ i[5] }}</td>
+                    </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    
+{% endblock %}
